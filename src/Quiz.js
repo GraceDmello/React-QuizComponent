@@ -1,5 +1,5 @@
 import React, {useState, Component} from 'react';
-import {quiz_questions} from './quiz_data.json';
+let quizData = require('./quiz_data.json');
 
 // const Quiz = () => {
 //   const [quiz_position, setQuizPosition] = useState(1);
@@ -8,7 +8,7 @@ import {quiz_questions} from './quiz_data.json';
 //   </div>);
 // };
 
-export default class Quiz extends Component  {
+class Quiz extends Component  {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,8 +17,10 @@ export default class Quiz extends Component  {
   }
 
   render() {
-    return (<div>
-      <div className="QuizQuestion">{quiz_questions[this.state.quiz_position].instruction_text}</div>
-    </div>);
+    return (
+      <div className="QuizQuestion">{quizData.quiz_questions[this.state.quiz_position].instruction_text}</div>
+    );
   }
 }
+
+export default Quiz;
