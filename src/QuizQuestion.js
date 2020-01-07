@@ -1,14 +1,8 @@
 import React, {Component} from 'react';
 
 class QuizQuestion extends Component{
-  // constructor(props) {
-  //   super(props);
-  //
-  // }
 
   render() {
-    console.log(this.props);
-
     return <main>
       <section>
         <p> {this.props.quiz_question.instruction_text}</p>
